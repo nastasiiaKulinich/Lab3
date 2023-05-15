@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/numbersFragment">
+
+    <fragment
+        android:id="@+id/numbersFragment"
+        android:name="com.example.numbers.presentation.number.NumbersFragment"
+        android:label="NumbersFragment" >
+        <action
+            android:id="@+id/action_numbersFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.numbers.presentation.details.DetailsFragment"
+        android:label="DetailsFragment" >
+
+        <argument
+            android:name="number"
+            app:argType="string" />
+
+        <argument
+            android:name="isRandom"
+            app:argType="boolean" />
+
+        <argument
+            android:name="fact"
+            app:argType="string" />
+
+    </fragment>
+</navigation>
